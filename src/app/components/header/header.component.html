@@ -1,8 +1,23 @@
-<ion-header class="ion-padding-horizontal ion-no-border">
+<!-- <ion-header class="ion-padding-horizontal ion-no-border">
   <ion-toolbar class="toolbar">
     <ion-avatar class="avatar">
-      <img src="../../../assets/images/avatar.png" alt="">
+      <img width="33" height="33" src="assets/images/avatar-1.png" alt="">
       <ion-badge>8</ion-badge>
+    </ion-avatar>
+    <ion-title>{{title}}</ion-title>
+    <ion-buttons slot="end">
+      <ion-menu-button>
+        <ion-icon src="assets/icon/icon-toggle.svg"></ion-icon>
+      </ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-header [translucent]="true" class="ion-no-border">
+  <ion-toolbar>
+    <ion-avatar class="avatar" slot="start">
+        <img width="33" height="33" src="assets/images/avatar-1.png" alt="avatar">
+        <ion-badge>8</ion-badge>
     </ion-avatar>
     <ion-title>{{title}}</ion-title>
     <ion-buttons slot="end">
@@ -10,3 +25,4 @@
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
+

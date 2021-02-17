@@ -1,33 +1,20 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>dashboard</ion-title>
+<ion-header id="app-header" [translucent]="true">
+  <ion-toolbar id="app-header-toolbar">
+    <ion-buttons slot="end">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Dashboard</ion-title>
   </ion-toolbar>
+  <app-hot-menu [hotIndex]="0"></app-hot-menu>
 </ion-header>
 
 <ion-content>
-
-  <div *ngFor="let cat of items" class="category-block">
-    <ion-row class="ion-no-padding" class="category-banner">
-      <ion-col class="text-left button tappable align-self-item" (click)="cat.expanded = ! cat.expanded">
-        {{cat.category}}
-      </ion-col>
-    </ion-row>
-    
-    <ion-slides [options]= "slidesConfig">
-      <ion-slide *ngFor="let product of cat.products">
-       Lorem ipsum dolor sit amet.
-       <h1>{{product.name}}</h1>
-      </ion-slide>
-    </ion-slides>
-  </div>
-
-  
-  <tr *ngFor="let item of categorysList">
-    <td>{{item.categoryName}}</td>
-    <ng-container *ngFor="let item1 of item.slides">
-      <h1>{{item1.slideTitle}}</h1>
-    </ng-container>
-  </tr>
-
-
+  <app-facility></app-facility>
+  <app-pack-data></app-pack-data>
+  <app-slider [type]="'home-banner'"></app-slider>
+  <app-promotion></app-promotion>
+  <app-category-home [type]="'itel-game'"></app-category-home>
+  <app-category-home [type]="'itel-cinema'"></app-category-home>
+  <app-category-home [type]="'itel-music'"></app-category-home>
+  <app-category-home [type]="'itel-sport'"></app-category-home>
 </ion-content>

@@ -1,0 +1,60 @@
+ion-content {
+    position: relative;
+    --background: #ED1F24;
+    text-align: center;
+}
+ion-icon {
+    width: 115px;
+    height: 115px;
+}
+ion-label {
+    font-size: 48px;
+    color: #fff;
+    font-weight: 700;
+    margin-bottom: 17px;
+}
+ion-label h4 {
+    font-size: 20px;
+    font-weight: 400;
+    color: #fff;
+}
+ion-content p {
+    font-size: 16px;
+    font-weight: 400;
+    color: #fff;
+    line-height: 22px;
+    margin-bottom: 25px;
+}
+ion-button {
+    // width: 350px;
+    width: 60%;
+    margin: auto;
+    color: #ED1F24;
+    font-size: 20px;
+    font-weight: 700;
+    --background: #fff;
+    --border-radius: 27px !important;
+}
+.popup-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #fff;
+}
+.popup-title-price {
+    font-size: 48px;
+    font-weight: 700;
+    color: #fff;
+}
+.popup-inr {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+.popup-inr ion-img {
+    width: 115px;
+    height: 115px;
+    margin: auto;
+    margin-bottom: 26px;
+}

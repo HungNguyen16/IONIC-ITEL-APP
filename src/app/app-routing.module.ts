@@ -4,26 +4,20 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    loadChildren: () => import('./pages/dashboard/dashboard.module').then( m => m.DashboardPageModule),
-    //redirectTo: 'folder/Inbox',
-    //redirectTo: 'notification',
-    //pathMatch: 'full'
+    redirectTo: 'home',
+    pathMatch: 'full'
   },
-  // {
-  //   path: 'dashboard',
-  //   loadChildren: () => import('./pages/dashboard/dashboard.module').then( m => m.DashboardPageModule)
-  // },
   {
-    path: 'folder/:id',
-    loadChildren: () => import('./folder/folder.module').then( m => m.FolderPageModule)
+    path: 'home',
+    loadChildren: () => import('./pages/dashboard/dashboard.module').then( m => m.DashboardPageModule)
   },
   {
     path: 'notification',
     loadChildren: () => import('./pages/notification/notification.module').then( m => m.NotificationPageModule)
   },
   {
-    path: 'topup',
-    loadChildren: () => import('./pages/topup/topup.module').then( m => m.TopupPageModule)
+    path: 'recharge-card',
+    loadChildren: () => import('./pages/recharge-card/recharge-card.module').then( m => m.RechargeCardPageModule)
   },
   {
     path: 'utilities',
@@ -68,7 +62,16 @@ const routes: Routes = [
   {
     path: 'log-out',
     loadChildren: () => import('./pages/log-out/log-out.module').then( m => m.LogOutPageModule)
+  },
+  {
+    path: 'packs',
+    loadChildren: () => import('./pages/packs/packs.module').then( m => m.PacksPageModule)
+  },
+  {
+    path: 'promotions',
+    loadChildren: () => import('./pages/promotions/promotions.module').then( m => m.PromotionsPageModule)
   }
+
 ];
 
 @NgModule({

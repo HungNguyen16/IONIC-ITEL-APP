@@ -1,0 +1,21 @@
+
+<div class="app-box pdr-20" *ngIf="musicsList != null">
+  <h2 class="app-title">Bảng xếp hạng</h2>
+  <div class="app-detail">
+    <ion-list lines="none" class="ion-padding-bottom">
+      <ion-item *ngFor="let item of musicsList">
+        <ion-thumbnail slot="start">
+          <img src="{{item.musicImg}}">
+        </ion-thumbnail>
+        <ion-label>
+          <h2>{{item.musicName}}</h2>
+          <p>{{item.musicAuthor}}</p>
+        </ion-label>
+        <ion-label class="time">
+          {{item.musicTiming}}
+        </ion-label>
+      </ion-item>
+    </ion-list>
+  </div>
+</div>
+

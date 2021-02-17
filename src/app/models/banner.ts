@@ -1,12 +1,6 @@
-// export interface Card {
-//     card_caption: string;
-//     card_title: string;
-//     card_sub: string;
-//     card_img: string;
-// }
+
 export class Banner {
-  
-  constructor (
+  constructor(
     public id = 0,
     public bannerCaption: string = '',
     public bannerTitle: string = '',

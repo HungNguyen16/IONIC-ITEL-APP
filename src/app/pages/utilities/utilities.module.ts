@@ -1,3 +1,4 @@
+import { SignInNewUserComponent } from './../../components/threading-page/sign-in-new-user/sign-in-new-user.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -15,6 +16,8 @@ import { UtilitiesPage } from './utilities.page';
     IonicModule,
     UtilitiesPageRoutingModule
   ],
-  declarations: [UtilitiesPage]
+  declarations: [UtilitiesPage,
+    SignInNewUserComponent
+  ]
 })
 export class UtilitiesPageModule {}

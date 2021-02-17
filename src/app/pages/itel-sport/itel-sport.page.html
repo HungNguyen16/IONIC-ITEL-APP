@@ -1,11 +1,14 @@
-<app-header [title]="'itel Sport'"></app-header>
-
+<ion-header id="app-header" [translucent]="true">
+  <ion-toolbar id="app-header-toolbar">
+    <ion-buttons slot="end">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Itel Sport</ion-title>
+  </ion-toolbar>
+  <app-hot-menu [hotIndex]="4"></app-hot-menu>
+</ion-header>
 
 <ion-content>
-  <app-menu></app-menu>
-  <app-banner [type]="3"></app-banner>
-  <app-slider [type]="2"></app-slider>
-  <app-slider [type]="1"></app-slider>
-  <app-slider [type]="3"></app-slider>
-
+  <app-category-all [type]="'itel-sport'"></app-category-all>
+  <app-play-list [type]="'itel-sport'"></app-play-list>
 </ion-content>

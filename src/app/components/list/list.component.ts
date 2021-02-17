@@ -13,9 +13,9 @@ export class ListComponent implements OnInit {
   constructor(private musicListService: MusicListService) { }
       
   ngOnInit() {
-    this.musicListService.getAll().subscribe(res => {
-      this.musicsList = res;
-      console.log('music', this.musicsList);
-    })
+    // this.musicListService.getAll().subscribe(res => {
+    //   this.musicsList = res;
+    //   console.log('music', this.musicsList);
+    // })
   }
 }
